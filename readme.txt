@@ -3,8 +3,8 @@ Contributors: bradt
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=5VPMGLLK94XJC
 Tags: uploads, amazon, s3, mirror, admin, media, cdn, cloudfront
 Requires at least: 3.5
-Tested up to: 4.0.1
-Stable tag: 0.7.2
+Tested up to: 4.1
+Stable tag: 0.8
 License: GPLv3
 
 Copies files to Amazon S3 as they are uploaded to the Media Library. Optionally configure Amazon CloudFront for faster delivery.
@@ -57,6 +57,15 @@ This version requires PHP 5.3.3+ and the Amazon Web Services plugin
 This version requires PHP 5.3.3+ and the Amazon Web Services plugin
 
 == Changelog ==
+
+= 0.8 - 2015-01-10 =
+* New: Redesigned settings UI
+* Improvement: SSL setting can be fully controlled, HTTPS for urls always, based on request or never
+* Improvement: Download files from S3 that are not found on server when running Regenerate Thumbnails plugin
+* Improvement: When calling `get_attached_file()` and file is missing from server, return S3 URL
+* Improvement: Code cleanup to WordPress coding standards
+* Bug Fix: Files for all subsites going into the same S3 folder on multisite installs setup prior to WP 3.5
+* Bug Fix: 'attempting to access local file system' error for some installs
 
 = 0.7.2 - 2014-12-11 =
 * Bug: Some buckets in the EU region causing permission and HTTP errors
